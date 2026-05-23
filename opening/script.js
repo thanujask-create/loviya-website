@@ -129,5 +129,5 @@ function finishOpening() {
         `Thank you ${name} 💖 for joining LOVIYA Grand Opening. You can now close this page.`
     );
 
-    window.close();
+    window.location.href = "../help/index.html";
 }
