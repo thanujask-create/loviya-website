@@ -1018,3 +1018,66 @@ button {
         letter-spacing: 10px;
     }
 }
+
+@media (max-width: 520px) {
+    body {
+        background:
+            linear-gradient(rgba(8, 1, 14, 0.18), rgba(8, 1, 14, 0.62)),
+            url("../assets/fb-cover.jpeg") center top / auto 100vh repeat-y;
+    }
+
+    .container {
+        padding: 0 14px 28px;
+    }
+
+    .help-hero {
+        min-height: auto;
+        padding: 14px;
+    }
+
+    .hero-overlay,
+    .contact-card,
+    .support-form,
+    .download-section,
+    .social-section {
+        background: rgba(12, 2, 20, 0.68);
+        border-radius: 22px;
+        padding: 18px;
+        box-shadow: 0 0 22px rgba(255, 40, 160, 0.24);
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .help-badge {
+        font-size: 10px;
+        padding: 7px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .contact-row {
+        gap: 10px;
+    }
+
+    .emoji-icon {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+    }
+
+    .contact-action {
+        padding: 11px 15px;
+    }
+}
