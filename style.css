@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background:
+        linear-gradient(rgba(8, 1, 14, 0.42), rgba(8, 1, 14, 0.82)),
+        url("../assets/fb-cover.jpeg") center / cover no-repeat fixed;
+}
+
+.help-hero {
+    min-height: 250px;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    text-align: center;
+}
+
+.hero-overlay,
+.contact-card,
+.support-form,
+.download-section,
+.social-section,
+.qr-box {
+    position: relative;
+    overflow: hidden;
+    background: rgba(18, 4, 28, 0.84);
+    border: 1px solid rgba(255, 90, 190, 0.32);
+    border-radius: 28px;
+    box-shadow: 0 0 34px rgba(255, 40, 160, 0.28);
+    backdrop-filter: blur(10px);
+}
+
+.hero-overlay {
+    width: 100%;
+    max-width: 560px;
+    padding: 26px 22px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 18px 38px;
+    text-align: center;
+}
+
+.logo {
+    width: 145px;
+    max-width: 75%;
+    filter: drop-shadow(0 0 18px rgba(255, 70, 180, 0.7));
+    animation: helpLogoFloat 4s ease-in-out infinite;
+}
+
+.help-badge,
+.section-label {
+    display: inline-block;
+    border-radius: 999px;
+    color: #ffe8f7;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, rgba(255, 22, 136, 0.35), rgba(124, 44, 255, 0.35));
+    border: 1px solid rgba(255, 210, 240, 0.38);
+    box-shadow: 0 0 20px rgba(255, 72, 170, 0.22);
+}
+
+.help-badge {
+    display: table;
+    margin: 14px auto 0;
+    padding: 9px 16px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+}
+
+.section-label {
+    margin-bottom: 10px;
+    padding: 7px 13px;
+    font-size: 11px;
+    letter-spacing: 0.45px;
+}
+
+h1 {
+    margin: 16px 0 8px;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+h3 {
+    margin: 0 0 6px;
+}
+
+p {
+    color: #ffd6f1;
+    line-height: 1.6;
+}
+
+.contact-card,
+.support-form,
+.download-section,
+.social-section {
+    padding: 22px;
+    margin-top: 18px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    padding: 14px 0;
+}
+
+.emoji-icon {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ff1688, #7b2cff);
+    font-size: 22px;
+}
+
+a {
+    color: #ff8bd6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-action {
+    padding: 12px 18px;
+    border-radius: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.22s;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.viber-btn {
+    background: linear-gradient(135deg, #7c4dff, #5f2eea);
+}
+
+.support-form input,
+.support-form textarea {
+    width: 100%;
+    margin-top: 14px;
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.09);
+    color: white;
+    font-size: 15px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.support-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.support-form input::placeholder,
+.support-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+.qr-section,
+.store-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.store-card {
+    padding: 14px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.26);
+    transition: 0.22s;
+}
+
+.qr-box {
+    padding: 14px;
+    transition: 0.22s;
+}
+
+.qr-image,
+.store-card img {
+    width: 100%;
+    border-radius: 16px;
+    background: white;
+}
+
+.store-badge {
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff1688, #7b2cff);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 16px;
+    border: 0;
+    border-radius: 18px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff1688, #7b2cff);
+    box-shadow: 0 0 22px rgba(255, 22, 136, 0.45);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.22s;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: skewX(-18deg);
+    animation: helpButtonShine 4s infinite;
+}
+
+button:hover,
+.contact-action:hover,
+.store-card:hover,
+.qr-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(255, 72, 170, 0.38);
+}
+
+.policy-page {
+    padding-top: 28px;
+}
+
+.policy-card {
+    text-align: left;
+}
+
+.policy-card p,
+.policy-card li {
+    color: #ffe3f5;
+    line-height: 1.6;
+}
+
+@keyframes helpLogoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-2px) scale(1.01);
+    }
+}
+
+@keyframes helpButtonShine {
+    0% {
+        left: -120%;
+    }
+
+    45%,
+    100% {
+        left: 130%;
+    }
+}
+
+@media (max-width: 520px) {
+    .help-hero {
+        min-height: 235px;
+        padding: 16px;
+    }
+
+    .hero-overlay {
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .qr-section,
+    .store-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-row {
+        align-items: flex-start;
+    }
+}

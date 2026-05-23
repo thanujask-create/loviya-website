@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOVIYA Help</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="help-hero">
+        <div class="hero-overlay">
+            <img src="../assets/logo_full.png" class="logo" alt="LOVIYA">
+
+            <div class="help-badge">Official LOVIYA Support</div>
+            <h1>LOVIYA Help Center</h1>
+            <p>Safety, support, privacy and download links in one place.</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section class="contact-card">
+            <div class="section-label">Need Help?</div>
+            <h2>Contact LOVIYA Support</h2>
+
+            <div class="contact-row">
+                <div class="emoji-icon">📧</div>
+                <div>
+                    <h3>Email Support</h3>
+                    <a href="mailto:loviyaapp@gmail.com">loviyaapp@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-row">
+                <div class="emoji-icon">💬</div>
+                <div class="contact-buttons">
+                    <a class="contact-action whatsapp-btn" href="https://wa.me/94772123456" target="_blank">
+                        WhatsApp
+                    </a>
+
+                    <a class="contact-action viber-btn" href="viber://add?number=94772123456">
+                        Viber
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-form">
+            <div class="section-label">Quick Support</div>
+            <h2>Send us a message</h2>
+            <p>Tell us your issue. Our support team will review it.</p>
+
+            <input id="supportName" type="text" placeholder="Your name" />
+            <input id="supportEmail" type="email" placeholder="Your email address" />
+            <textarea id="supportMessage" placeholder="Type your problem here"></textarea>
+
+            <button onclick="sendSupportMessage()">Send Message</button>
+        </section>
+
+        <section class="download-section">
+            <div class="section-label">Get the App</div>
+            <h2>Find Us / Download LOVIYA</h2>
+            <p>Scan the QR code or find us on your app store.</p>
+
+            <div class="store-grid">
+                <div class="store-card">
+                    <div class="store-badge"> App Store</div>
+                    <img src="../assets/qr/ios-download.png" class="qr-image" alt="iOS Download QR">
+                    <p>iPhone / iOS</p>
+                </div>
+
+                <div class="store-card">
+                    <div class="store-badge">▶ Google Play</div>
+                    <img src="../assets/qr/android-download.png" class="qr-image" alt="Android Download QR">
+                    <p>Android</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <div class="section-label">Social</div>
+            <h2>Follow LOVIYA</h2>
+
+            <div class="qr-section">
+                <div class="qr-box">
+                    <img src="../assets/qr/facebook.png" class="qr-image" alt="Facebook QR">
+                    <p>Facebook</p>
+                </div>
+
+                <div class="qr-box">
+                    <img src="../assets/qr/instagram.png" class="qr-image" alt="Instagram QR">
+                    <p>Instagram</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="buttons">
+            <button onclick="openTerms()">Terms & Conditions</button>
+            <button onclick="openPrivacy()">Privacy Policy</button>
+            <button onclick="openCommunityGuidelines()">Community Guidelines</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
