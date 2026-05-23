@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOVIYA Grand Opening</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="page">
+        <section id="nameScreen" class="card active">
+            <img src="../assets/logo_full.png" class="logo-full" alt="LOVIYA Logo" />
+
+            <div class="premium-badge top-badge">
+                Private Preview Invite
+            </div>
+            <h1 class="cinematic-title">Grand Opening</h1>
+            <p class="tagline">More Than Swipes 💞</p>
+            <div class="heart-connect">
+                <span class="heart-dot">💖</span>
+                <span class="connect-line"></span>
+                <span class="heart-dot">💖</span>
+            </div>
+            <p class="soft-note">A new way to meet real people, safely and beautifully.</p>
+
+            <div class="name-box">
+                <input id="guestName" type="text" placeholder="Type your name" autocomplete="off"
+                    oninput="showNameSuggestions()" />
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+
+            <button onclick="startOpening()">Enter Opening Ceremony</button>
+        </section>
+
+        <section id="welcomeScreen" class="card hidden">
+            <h2 id="welcomeText">Welcome to LOVIYA</h2>
+
+            <div class="premium-badge">Launch Preparation</div>
+
+            <p class="soft-note launch-note">
+                LOVIYA Grand Opening unlocks at 11:00 AM Sri Lanka Time 🇱🇰
+            </p>
+
+            <div class="launch-core">
+                <div class="core-ring"></div>
+                <img src="../assets/logo_full.png" class="core-logo" alt="LOVIYA Logo" />
+            </div>
+
+            <div class="time-panel">
+                <p>Current Sri Lanka Time</p>
+                <h3 id="sriLankaTime">Checking...</h3>
+            </div>
+
+            <div class="process-list">
+                <div class="process-step active">Verifying your invitation</div>
+                <div class="process-step">Connecting secure LOVIYA cloud</div>
+                <div class="process-step">Preparing App Store release</div>
+                <div class="process-step">Preparing Google Play release</div>
+                <div class="process-step">Activating safe messaging system</div>
+                <div class="process-step">Final launch validation</div>
+            </div>
+
+            <p id="launchStatusText" class="launch-status">
+                Preparing your launch experience...
+            </p>
+
+            <button id="launchBtn" class="launch-button hidden" onclick="launchLoviya()">
+                <span class="left-arrow">»»</span>
+                <span class="launch-text">
+                    <small>PRESS</small>
+                    <strong>Launch LOVIYA</strong>
+                    <em>Official Launch Ready</em>
+                </span>
+                <span class="right-arrow">««</span>
+            </button>
+        </section>
+
+        <section id="finalScreen" class="final-card hidden">
+            <img src="../assets/fb-cover.jpeg" class="final-banner" alt="LOVIYA Banner" />
+
+            <div class="premium-badge">Grand Opening Guest</div>
+            <h2>LOVIYA is officially launched 💖</h2>
+            <h3 id="finalGuestName" class="final-guest-name"></h3>
+
+            <p class="final-message">
+                Thank you for joining our grand opening ceremony.
+                Let real connections begin with LOVIYA.
+            </p>
+
+            <div class="download-box">
+                <h3>Find us / Download LOVIYA</h3>
+
+                <div class="store-grid">
+                    <div class="store-card">
+                        <div class="store-badge"> App Store</div>
+                        <img src="../assets/qr/ios-download.png" alt="iOS QR" />
+                        <p>iPhone / iOS</p>
+                    </div>
+
+                    <div class="store-card">
+                        <div class="store-badge">▶ Google Play</div>
+                        <img src="../assets/qr/android-download.png" alt="Android QR" />
+                        <p>Android</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="celebration-3d">
+                <span>💖</span><span>✨</span><span>💕</span><span>🎉</span><span>💘</span><span>🌟</span>
+            </div>
+
+            <button onclick="finishOpening()">Finish ✨</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
