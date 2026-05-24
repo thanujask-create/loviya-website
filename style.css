@@ -489,3 +489,37 @@ button::before {
         transform: translate(20px, -25px) scale(1.12);
     }
 }
+
+.back-help-btn {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 22px;
+    padding: 17px 20px;
+    border: 1px solid rgba(255, 140, 210, 0.42);
+    border-radius: 24px;
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #ff1688, #7b2cff);
+    box-shadow:
+        0 0 28px rgba(255, 40, 160, 0.32),
+        inset 0 0 14px rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.back-help-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent);
+    transform: skewX(-20deg);
+    animation: buttonShine 3.2s infinite;
+}
