@@ -7,94 +7,74 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     background:
-        linear-gradient(rgba(8, 1, 14, 0.42), rgba(8, 1, 14, 0.82)),
+        linear-gradient(rgba(8, 1, 14, 0.28), rgba(8, 1, 14, 0.82)),
         url("../assets/fb-cover.jpeg") center / cover no-repeat fixed;
 }
 
-.help-hero {
-    min-height: 250px;
-    display: grid;
-    place-items: center;
-    padding: 22px;
-    text-align: center;
+.mobile-shell {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 18px 16px 34px;
 }
 
-.hero-overlay,
-.contact-card,
+.hero-card,
 .support-form,
 .download-section,
 .social-section,
 .qr-box {
     position: relative;
     overflow: hidden;
-    background: rgba(18, 4, 28, 0.84);
+    isolation: isolate;
+    border-radius: 30px;
+    background: rgba(14, 3, 24, 0.72);
     border: 1px solid rgba(255, 90, 190, 0.32);
-    border-radius: 28px;
     box-shadow: 0 0 34px rgba(255, 40, 160, 0.28);
     backdrop-filter: blur(10px);
 }
 
-.hero-overlay {
-    width: 100%;
-    max-width: 560px;
-    padding: 26px 22px;
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 18px 38px;
+.hero-card {
+    min-height: 76vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     text-align: center;
+    padding: 28px 22px;
 }
 
 .logo {
-    width: 145px;
-    max-width: 75%;
-    filter: drop-shadow(0 0 18px rgba(255, 70, 180, 0.7));
+    width: 138px;
+    max-width: 72%;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 18px rgba(255, 70, 180, 0.85));
     animation: helpLogoFloat 4s ease-in-out infinite;
 }
 
 .help-badge,
 .section-label {
     display: inline-block;
+    margin: 14px auto 0;
+    padding: 8px 14px;
     border-radius: 999px;
     color: #ffe8f7;
-    font-weight: 800;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, rgba(255, 22, 136, 0.35), rgba(124, 44, 255, 0.35));
-    border: 1px solid rgba(255, 210, 240, 0.38);
-    box-shadow: 0 0 20px rgba(255, 72, 170, 0.22);
-}
-
-.help-badge {
-    display: table;
-    margin: 14px auto 0;
-    padding: 9px 16px;
-    font-size: 12px;
-    letter-spacing: 0.4px;
-}
-
-.section-label {
-    margin-bottom: 10px;
-    padding: 7px 13px;
     font-size: 11px;
-    letter-spacing: 0.45px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, rgba(255, 22, 136, 0.42), rgba(124, 44, 255, 0.42));
+    border: 1px solid rgba(255, 210, 240, 0.38);
+    box-shadow: 0 0 20px rgba(255, 72, 170, 0.25);
 }
 
 h1 {
-    margin: 16px 0 8px;
-    font-size: 34px;
-    line-height: 1.15;
+    margin: 18px 0 8px;
+    font-size: 36px;
+    line-height: 1.12;
 }
 
 h2 {
-    margin: 0 0 12px;
-    font-size: 24px;
-}
-
-h3 {
-    margin: 0 0 6px;
+    margin: 0 0 10px;
+    font-size: 23px;
 }
 
 p {
@@ -102,60 +82,69 @@ p {
     line-height: 1.6;
 }
 
-.contact-card,
+.quick-actions {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+    background: rgba(14, 3, 24, 0.76);
+    border: 1px solid rgba(255, 90, 190, 0.26);
+    box-shadow: 0 0 24px rgba(255, 40, 160, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.quick-action span {
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    font-size: 26px;
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.18),
+        inset 0 0 12px rgba(255, 255, 255, 0.12);
+
+    animation: supportIconFloat 3s ease-in-out infinite;
+}
+
+.quick-action strong {
+    display: block;
+    font-size: 16px;
+}
+
+.quick-action small {
+    color: #ffd6f1;
+}
+
+.whatsapp-action span {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.email-action span {
+    background: linear-gradient(135deg, #ff1688, #7b2cff);
+}
+
+.viber-action span {
+    background: linear-gradient(135deg, #7c4dff, #5f2eea);
+}
+
 .support-form,
 .download-section,
 .social-section {
     padding: 22px;
     margin-top: 18px;
-}
-
-.contact-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    text-align: left;
-    padding: 14px 0;
-}
-
-.emoji-icon {
-    width: 46px;
-    min-width: 46px;
-    height: 46px;
-    display: grid;
-    place-items: center;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #ff1688, #7b2cff);
-    font-size: 22px;
-}
-
-a {
-    color: #ff8bd6;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.contact-action {
-    padding: 12px 18px;
-    border-radius: 16px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.22s;
-}
-
-.whatsapp-btn {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-}
-
-.viber-btn {
-    background: linear-gradient(135deg, #7c4dff, #5f2eea);
+    text-align: center;
 }
 
 .support-form input,
@@ -165,7 +154,7 @@ a {
     padding: 15px;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.22);
-    background: rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.10);
     color: white;
     font-size: 15px;
     outline: none;
@@ -179,34 +168,22 @@ a {
 
 .support-form input::placeholder,
 .support-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.66);
+    color: rgba(255, 255, 255, 0.68);
 }
 
-.qr-section,
-.store-grid {
+.store-grid,
+.qr-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin-top: 16px;
 }
 
-.store-card {
-    padding: 14px;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.26);
-    transition: 0.22s;
-}
-
+.store-card,
 .qr-box {
     padding: 14px;
-    transition: 0.22s;
-}
-
-.qr-image,
-.store-card img {
-    width: 100%;
-    border-radius: 16px;
-    background: white;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.28);
 }
 
 .store-badge {
@@ -217,54 +194,61 @@ a {
     background: linear-gradient(135deg, #ff1688, #7b2cff);
 }
 
-.buttons {
-    margin-top: 20px;
-}
-
-button {
+.qr-image,
+.store-card img {
     width: 100%;
-    margin-top: 14px;
-    padding: 16px;
-    border: 0;
-    border-radius: 18px;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff1688, #7b2cff);
-    box-shadow: 0 0 22px rgba(255, 22, 136, 0.45);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: 0.22s;
+    border-radius: 16px;
+    background: white;
 }
 
-button::after {
+.legal-links {
+    margin-top: 18px;
+}
+
+button::before {
     content: "";
     position: absolute;
     top: 0;
     left: -120%;
-    width: 80%;
+    width: 70%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-    transform: skewX(-18deg);
-    animation: helpButtonShine 4s infinite;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent);
+
+    transform: skewX(-20deg);
+
+    animation: buttonShine 3.2s infinite;
 }
 
-button:hover,
-.contact-action:hover,
-.store-card:hover,
-.qr-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 30px rgba(255, 72, 170, 0.38);
+@keyframes buttonShine {
+    0% {
+        left: -120%;
+    }
+
+    100% {
+        left: 160%;
+    }
 }
 
 .policy-page {
-    padding-top: 28px;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 24px 16px 36px;
+    text-align: center;
 }
 
 .policy-card {
     text-align: left;
+    padding: 20px;
+    margin-top: 16px;
+    border-radius: 24px;
+    background: rgba(14, 3, 24, 0.76);
+    border: 1px solid rgba(255, 90, 190, 0.26);
 }
 
 .policy-card p,
@@ -281,50 +265,132 @@ button:hover,
     }
 
     50% {
-        transform: translateY(-2px) scale(1.01);
-    }
-}
-
-@keyframes helpButtonShine {
-    0% {
-        left: -120%;
-    }
-
-    45%,
-    100% {
-        left: 130%;
+        transform: translateY(-3px) scale(1.015);
     }
 }
 
 @media (max-width: 520px) {
-    .help-hero {
-        min-height: 235px;
-        padding: 16px;
+    .mobile-shell {
+        padding: 14px 13px 30px;
     }
 
-    .hero-overlay {
-        padding: 22px;
-        border-radius: 24px;
+    .hero-card {
+        min-height: 78vh;
+        padding: 26px 18px;
     }
 
     .logo {
-        width: 130px;
+        width: 120px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 31px;
     }
 
     h2 {
         font-size: 21px;
     }
 
-    .qr-section,
-    .store-grid {
+    .store-grid,
+    .qr-section {
         grid-template-columns: 1fr;
     }
 
-    .contact-row {
-        align-items: flex-start;
+    .quick-action {
+        padding: 15px;
+    }
+}
+
+.hero-card::before,
+.support-form::before,
+.download-section::before,
+.social-section::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 1.5px;
+
+    background:
+        linear-gradient(130deg,
+            transparent,
+            rgba(255, 255, 255, 0.9),
+            #ff4fb8,
+            #7b2cff,
+            transparent);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    animation: borderFlow 5s linear infinite;
+
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+@keyframes borderFlow {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+.ambient {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.22;
+    z-index: -1;
+    animation: ambientMove 14s ease-in-out infinite;
+}
+
+.ambient-1 {
+    width: 240px;
+    height: 240px;
+    background: #ff1688;
+    top: -40px;
+    left: -60px;
+}
+
+.ambient-2 {
+    width: 300px;
+    height: 300px;
+    background: #7b2cff;
+    bottom: -80px;
+    right: -90px;
+    animation-delay: 3s;
+}
+
+.ambient-3 {
+    width: 180px;
+    height: 180px;
+    background: #ff8bd6;
+    top: 40%;
+    left: 55%;
+    animation-delay: 6s;
+}
+
+@keyframes ambientMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(20px, -25px) scale(1.12);
     }
 }
