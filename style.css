@@ -300,7 +300,38 @@ p {
     }
 }
 
-button::before {
+.support-form button {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    margin-top: 16px;
+    padding: 17px 20px;
+
+    border: 0;
+    border-radius: 22px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+
+    background: linear-gradient(135deg, #ff1688, #7b2cff);
+
+    box-shadow:
+        0 0 28px rgba(255, 40, 160, 0.38),
+        0 10px 24px rgba(0, 0, 0, 0.22);
+
+    cursor: pointer;
+}
+
+.support-form button:active {
+    transform: scale(0.98);
+}
+
+.support-form button::before,
+.legal-links button::before,
+.back-help-btn::before {
     content: "";
     position: absolute;
     top: 0;
