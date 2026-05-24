@@ -25,6 +25,7 @@ body {
 .qr-box {
     position: relative;
     overflow: hidden;
+    isolation: isolate;
     border-radius: 30px;
     background: rgba(14, 3, 24, 0.72);
     border: 1px solid rgba(255, 90, 190, 0.32);
@@ -102,13 +103,19 @@ p {
 }
 
 .quick-action span {
-    width: 48px;
-    min-width: 48px;
-    height: 48px;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
     display: grid;
     place-items: center;
-    border-radius: 17px;
-    font-size: 24px;
+    border-radius: 18px;
+    font-size: 26px;
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.18),
+        inset 0 0 12px rgba(255, 255, 255, 0.12);
+
+    animation: supportIconFloat 3s ease-in-out infinite;
 }
 
 .quick-action strong {
@@ -198,19 +205,33 @@ p {
     margin-top: 18px;
 }
 
-button {
-    width: 100%;
-    margin-top: 12px;
-    padding: 16px;
-    border: 0;
-    border-radius: 18px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff1688, #7b2cff);
-    box-shadow: 0 0 22px rgba(255, 22, 136, 0.45);
-    cursor: pointer;
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent);
+
+    transform: skewX(-20deg);
+
+    animation: buttonShine 3.2s infinite;
+}
+
+@keyframes buttonShine {
+    0% {
+        left: -120%;
+    }
+
+    100% {
+        left: 160%;
+    }
 }
 
 .policy-page {
@@ -277,5 +298,99 @@ button {
 
     .quick-action {
         padding: 15px;
+    }
+}
+
+.hero-card::before,
+.support-form::before,
+.download-section::before,
+.social-section::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 1.5px;
+
+    background:
+        linear-gradient(130deg,
+            transparent,
+            rgba(255, 255, 255, 0.9),
+            #ff4fb8,
+            #7b2cff,
+            transparent);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    animation: borderFlow 5s linear infinite;
+
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+@keyframes borderFlow {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+.ambient {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.22;
+    z-index: -1;
+    animation: ambientMove 14s ease-in-out infinite;
+}
+
+.ambient-1 {
+    width: 240px;
+    height: 240px;
+    background: #ff1688;
+    top: -40px;
+    left: -60px;
+}
+
+.ambient-2 {
+    width: 300px;
+    height: 300px;
+    background: #7b2cff;
+    bottom: -80px;
+    right: -90px;
+    animation-delay: 3s;
+}
+
+.ambient-3 {
+    width: 180px;
+    height: 180px;
+    background: #ff8bd6;
+    top: 40%;
+    left: 55%;
+    animation-delay: 6s;
+}
+
+@keyframes ambientMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(20px, -25px) scale(1.12);
     }
 }
