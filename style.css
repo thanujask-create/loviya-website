@@ -34,12 +34,12 @@ body {
 }
 
 .hero-card {
-    min-height: 76vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: center;
-    padding: 28px 22px;
+    padding: 34px 22px;
 }
 
 .logo {
@@ -370,8 +370,8 @@ button::before {
     }
 
     .hero-card {
-        min-height: 78vh;
-        padding: 26px 18px;
+        min-height: auto;
+        padding: 32px 18px;
     }
 
     .logo {
@@ -396,52 +396,7 @@ button::before {
     }
 }
 
-.hero-card::before,
-.support-form::before,
-.download-section::before,
-.social-section::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    padding: 1.5px;
 
-    background:
-        linear-gradient(130deg,
-            transparent,
-            rgba(255, 255, 255, 0.9),
-            #ff4fb8,
-            #7b2cff,
-            transparent);
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    animation: borderFlow 5s linear infinite;
-
-    opacity: 0.9;
-    pointer-events: none;
-}
-
-@keyframes borderFlow {
-    0% {
-        transform: rotate(0deg);
-        filter: hue-rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-}
 
 .ambient {
     position: fixed;
